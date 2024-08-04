@@ -11,7 +11,7 @@ set(CMAKE_C_COMPILER_WORKS 1 CACHE INTERNAL "")
 set(CMAKE_CXX_COMPILER_WORKS 1 CACHE INTERNAL "")
 
 # SET HERE YOUR BUILDING FLAGS
-set(FLAGS "-Wall -Wextra -Os -ffunction-sections -fdata-sections -nostdlib -flto -mthumb -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -mtune=cortex-a9 -DCLOCK_MONOTONIC=0" CACHE STRING "" FORCE)
+set(FLAGS "-Wall -Wextra -Os -ffunction-sections -fdata-sections -nostdlib -flto -mthumb -mcpu=cortex-a9 -mfpu=neon-vfpv3 -mfloat-abi=hard -mtune=cortex-a9 -DCLOCK_MONOTONIC=0" CACHE STRING "" FORCE)
 
 set(CMAKE_C_FLAGS_INIT "-std=c11 ${FLAGS} -Wall -O3 -c -fmessage-length=0 -MT\"$@\"" CACHE STRING "" FORCE)
 set(CMAKE_CXX_FLAGS_INIT "-std=c++11 ${FLAGS} -Wall -O3 -c -fmessage-length=0 -MT\"$@\"" CACHE STRING "" FORCE)
